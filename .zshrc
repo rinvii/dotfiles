@@ -1,6 +1,7 @@
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
@@ -15,3 +16,5 @@ source $ZSH/oh-my-zsh.sh
 
 alias code="code-insiders"
 source ~/.quotes.sh
+
+. "$HOME/.local/bin/env"
