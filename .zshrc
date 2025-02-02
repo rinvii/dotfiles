@@ -16,5 +16,3 @@ source $ZSH/oh-my-zsh.sh
 
 alias code="code-insiders"
 source ~/.quotes.sh
-
-. "$HOME/.local/bin/env"
