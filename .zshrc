@@ -9,6 +9,8 @@ ZSH_THEME="robbyrussell"
 zstyle ':omz:update' mode disabled
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c084fc"
+DISABLE_AUTO_UPDATE=true
+DISABLE_UPDATE_PROMPT=true
 source $ZSH/oh-my-zsh.sh
 
 # tabtab source for packages
