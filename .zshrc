@@ -21,3 +21,11 @@ alias code="code-insiders"
 source ~/.quotes.sh
 
 eval "$(atuin init zsh --disable-up-arrow)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# opencode
+export PATH=/Users/ronniedelossantos/.opencode/bin:$PATH
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"

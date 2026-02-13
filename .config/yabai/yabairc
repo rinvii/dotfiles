@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+
+# Ensure the socket is ready before sending commands
+sleep 1
+
+# Define absolute path to yabai binary
+YABAI="/Users/ronniedelossantos/.local/bin/yabai"
+
+# Load the scripting addition (Only works if SIP is partially disabled)
+# sudo $YABAI --load-sa
+
+# Appearance (Gaps/Padding)
+$YABAI -m config top_padding    10
+$YABAI -m config bottom_padding 10
+$YABAI -m config left_padding   10
+$YABAI -m config right_padding  10
+$YABAI -m config window_gap     10
+
+# Mouse support
+$YABAI -m config mouse_modifier alt
+$YABAI -m config mouse_action1 move
+$YABAI -m config mouse_action2 resize
+
+# --- RULES ---
+# 1. Default: Float everything (Unmanage all windows)
+$YABAI -m rule --add app="^.*$" manage=off
+
+# 2. Whitelist: Manage specific apps (Tile 'kitty')
+$YABAI -m rule --add app="^kitty$" manage=on
+
+# --- LAYOUT ---
+# Set layout to bsp LAST, so rules are already active when tiling starts
+$YABAI -m config layout bsp
+
+echo "yabai configuration loaded.."
