@@ -29,3 +29,8 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # opencode
 export PATH=/Users/ronniedelossantos/.opencode/bin:$PATH
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+alias ls='exa --icons --git'
+alias l='exa -lbF --git --icons'
+alias ll='exa -lbGF --git --icons'
+alias la='exa -lbhHigUmuSa --time-style=long-iso --git --icons'
+alias tree='exa --tree --icons'
